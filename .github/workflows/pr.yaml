@@ -20,7 +20,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Build and Publish ClickOnce with MSBuild
-      shell: powershell
+      shell: pwsh
       run: |
         nuget restore ./AFIFSALESSYSTEM.sln
         msbuild ./AFIFSALESSYSTEM/AFIFSALESSYSTEM.csproj `
