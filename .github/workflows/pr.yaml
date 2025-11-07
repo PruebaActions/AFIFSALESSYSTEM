@@ -1,0 +1,40 @@
+name: Building ClickOnce
+
+on:
+  push:
+    branches:
+      - master
+
+permissions:
+  actions: write
+  contents: write
+  security-events: write
+  issues: write
+
+
+jobs:
+  build:
+    runs-on: [self-hosted, windows, x64, laptop]
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Build and Publish ClickOnce with MSBuild
+      shell: powershell
+      run: |
+        msbuild TuProyecto/TuProyecto.csproj `
+          /t:Publish `
+          /p:Configuration=Release `
+          /p:Platform=x86 `
+          /p:AssemblyVersion="2.0.0.0" `
+          /p:FileVersion="2025.11.7.1" `
+          /p:ApplicationVersion="2.0.0.1" `
+          /p:MinimumRequiredVersion="2.0.0.0" `
+          /p:PublishUrl="C:\publish\" `
+          /p:InstallUrl="https://tuservidor.com/aplicacion/" `
+          /p:Install=true `
+          /p:PublisherName="AFISALESSYSTEM" `
+          /p:CreateDesktopShortcut=true `
+          /p:BootstrapperEnabled=true `
+          /p:IsWebBootstrapper=true `
+          /v:detailed
