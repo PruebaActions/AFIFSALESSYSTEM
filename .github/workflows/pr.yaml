@@ -26,7 +26,7 @@ jobs:
         msbuild ./AFIFSALESSYSTEM/AFIFSALESSYSTEM.csproj `
           /t:Publish `
           /p:Configuration=Release `
-          /p:Platform=x86 `
+          /p:Platform="Any CPU" `
           /p:AssemblyVersion="2.0.0.0" `
           /p:FileVersion="2025.11.7.1" `
           /p:ApplicationVersion="2.0.0.1" `
