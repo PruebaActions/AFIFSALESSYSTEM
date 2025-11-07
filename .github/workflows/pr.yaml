@@ -22,7 +22,8 @@ jobs:
     - name: Build and Publish ClickOnce with MSBuild
       shell: powershell
       run: |
-        msbuild TuProyecto/TuProyecto.csproj `
+        nuget restore ./AFIFSALESSYSTEM.sln
+        msbuild ./AFIFSALESSYSTEM/AFIFSALESSYSTEM.csproj `
           /t:Publish `
           /p:Configuration=Release `
           /p:Platform=x86 `
