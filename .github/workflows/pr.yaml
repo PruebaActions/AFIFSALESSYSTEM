@@ -34,6 +34,7 @@ jobs:
           /p:PublishDir="C:\\publish\\" `
           /p:InstallUrl="https://tuservidor.com/aplicacion/" `
           /p:Install=true `
+          /p:ProductName="AFIFSALESSYSTEM_NUEVO" `
           /p:PublisherName="mmg" `
           /p:CreateDesktopShortcut=true `
           /p:BootstrapperEnabled=true `

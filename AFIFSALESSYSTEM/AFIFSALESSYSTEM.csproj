@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ProductName>AFIF</ProductName>
+    <ProductName Condition=" '$(ProductName)' == '' ">AFIF</ProductName>
     <PublisherName Condition=" '$(PublisherName)' == '' ">Frank</PublisherName>
     <SuiteName>Suite</SuiteName>
     <ApplicationRevision>2</ApplicationRevision>
