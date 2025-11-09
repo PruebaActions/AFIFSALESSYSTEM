@@ -23,7 +23,7 @@ jobs:
       shell: powershell
       run: |
         nuget restore ./AFIFSALESSYSTEM.sln
-        msbuild ./AFIFSALESSYSTEM/AFIFSALESSYSTEM.csproj `
+        msbuild ./AFIFSALESSYSTEM.sln `
           /t:Publish `
           /p:Configuration=Release `
           /p:Platform="Any CPU" `
@@ -38,4 +38,7 @@ jobs:
           /p:CreateDesktopShortcut=true `
           /p:BootstrapperEnabled=true `
           /p:IsWebBootstrapper=true `
+          /p:SignManifests=false `
+          /p:ManifestCertificateThumbprint="" `
+          /p:ManifestKeyFile="" `
           /v:detailed
