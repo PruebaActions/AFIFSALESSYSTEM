@@ -27,10 +27,10 @@ jobs:
           /t:Publish `
           /p:Configuration=Release `
           /p:Platform="Any CPU" `
-          /p:AssemblyVersion=2.0.0.0 `
+          /p:AssemblyVersion=3.0.0.0 `
           /p:FileVersion="2025.11.7.1" `
-          /p:ApplicationVersion="2.0.0.1" `
-          /p:MinimumRequiredVersion="2.0.0.0" `
+          /p:ApplicationVersion="3.0.0.1" `
+          /p:MinimumRequiredVersion="3.0.0.0" `
           /p:PublishDir="C:\\publish\\" `
           /p:InstallUrl="https://tuservidor.com/aplicacion/" `
           /p:Install=true `
