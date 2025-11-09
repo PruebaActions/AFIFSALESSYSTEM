@@ -31,7 +31,7 @@ jobs:
           /p:FileVersion="2025.11.7.1" `
           /p:ApplicationVersion="2.0.0.1" `
           /p:MinimumRequiredVersion="2.0.0.0" `
-          /p:PublishUrl="C:\publish\" `
+          /p:PublishUrl="C:\\publish\\" `
           /p:InstallUrl="https://tuservidor.com/aplicacion/" `
           /p:Install=true `
           /p:PublisherName="AFISALESSYSTEM" `
