@@ -41,5 +41,5 @@ jobs:
           /p:SignManifests=false `
           /p:ManifestCertificateThumbprint="" `
           /p:ManifestKeyFile="" `
-          /p:OutputPath="bin\Release"
+          /p:OutputPath="bin\Release" `
           /v:detailed
