@@ -23,7 +23,7 @@ jobs:
       shell: powershell
       run: |
         nuget restore ./AFIFSALESSYSTEM.sln
-        msbuild ./AFIFSALESSYSTEM.sln
+        msbuild ./AFIFSALESSYSTEM.sln `
           /t:Publish `
           /p:Configuration=Release `
           /p:Platform="Any CPU" `
