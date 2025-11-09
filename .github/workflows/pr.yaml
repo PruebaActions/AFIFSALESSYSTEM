@@ -18,28 +18,20 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-
+  
     - name: Build and Publish ClickOnce with MSBuild
       shell: powershell
       run: |
         nuget restore ./AFIFSALESSYSTEM.sln
-
-        # Define variables
-        $version = "2.0.0.1"
-        $publishDir = "C:\\publish\\app.publish\\"
-        $publishUrl = "file:///$publishDir"
-
-        # Ejecuta ClickOnce Publish
-        & msbuild ./AFIFSALESSYSTEM/AFIFSALESSYSTEM.csproj `
+        msbuild ./AFIFSALESSYSTEM/AFIFSALESSYSTEM.csproj `
           /t:Publish `
           /p:Configuration=Release `
           /p:Platform="Any CPU" `
-          /p:AssemblyVersion="2.0.0.0" `
-          /p:FileVersion="2025.11.9.1" `
-          /p:ApplicationVersion="$version" `
+          /p:AssemblyVersion=2.0.0.0 `
+          /p:FileVersion="2025.11.7.1" `
+          /p:ApplicationVersion="2.0.0.1" `
           /p:MinimumRequiredVersion="2.0.0.0" `
-          /p:PublishDir="$publishDir" `
-          /p:PublishUrl="$publishUrl" `
+          /p:PublishDir="C:\\publish\\" `
           /p:InstallUrl="https://tuservidor.com/aplicacion/" `
           /p:Install=true `
           /p:ProductName="AFIFSALESSYSTEM_NUEVO" `
@@ -48,6 +40,7 @@ jobs:
           /p:BootstrapperEnabled=true `
           /p:IsWebBootstrapper=true `
           /p:SignManifests=false `
-          /p:OutputPath="bin\\Release" `
-          /p:GenerateManifests=true `
-          /v:minimal
+          /p:ManifestCertificateThumbprint="" `
+          /p:ManifestKeyFile="" `
+          /p:OutputPath="bin\Release" `
+          /v:detailed
