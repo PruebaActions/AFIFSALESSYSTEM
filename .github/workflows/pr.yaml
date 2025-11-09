@@ -24,7 +24,7 @@ jobs:
       run: |
         nuget restore ./AFIFSALESSYSTEM.sln
         msbuild ./AFIFSALESSYSTEM/AFIFSALESSYSTEM.csproj `
-          /t:Build `
+          /t:Publish `
           /p:Configuration=Release `
           /p:Platform="Any CPU" `
           /p:AssemblyVersion=2.0.0.0 `

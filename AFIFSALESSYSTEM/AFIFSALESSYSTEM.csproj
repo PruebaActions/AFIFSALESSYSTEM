@@ -24,7 +24,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <ProductName>AFIF</ProductName>
-    <PublisherName Condition=" '$(ProductName)' == '' ">Frank</PublisherName>
+    <PublisherName Condition=" '$(PublisherName)' == '' ">Frank</PublisherName>
     <SuiteName>Suite</SuiteName>
     <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion Condition=" '$(ApplicationVersion)' == '' ">1.0.0.%2a</ApplicationVersion>
