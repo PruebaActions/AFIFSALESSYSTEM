@@ -34,7 +34,7 @@ jobs:
           /p:PublishDir="C:\\publish\\" `
           /p:InstallUrl="https://tuservidor.com/aplicacion/" `
           /p:Install=true `
-          /p:PublisherName="AFISALESSYSTEM" `
+          /p:PublisherName="mmg" `
           /p:CreateDesktopShortcut=true `
           /p:BootstrapperEnabled=true `
           /p:IsWebBootstrapper=true `
