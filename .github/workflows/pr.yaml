@@ -19,3 +19,42 @@ jobs:
       publishDir: "C:\\inetpub\\wwwroot\\AFIFSALESSYSTEM\\"
       installUrl: "www.google.com"
       appVersion: "2025.10.11.2"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    # - name: Build and Publish ClickOnce with MSBuild
+    #   shell: powershell
+    #   run: |
+    #     nuget restore ./AFIFSALESSYSTEM.sln
+    #     msbuild ./AFIFSALESSYSTEM/AFIFSALESSYSTEM.csproj `
+    #       /t:Publish `
+    #       /p:Configuration=Release `
+    #       /p:Platform="Any CPU" `
+    #       /p:AssemblyVersion=3.0.0.0 `
+    #       /p:FileVersion="2025.11.7.1" `
+    #       /p:ApplicationVersion="3.0.0.1" `
+    #       /p:MinimumRequiredVersion="3.0.0.0" `
+    #       /p:PublishDir="C:\\publish\\" `
+    #       /p:InstallUrl="https://tuservidor.com/aplicacion/" `
+    #       /p:Install=true `
+    #       /p:ProductName="AFIFSALESSYSTEM_NUEVO" `
+    #       /p:PublisherName="Hola" `
+    #       /p:CreateDesktopShortcut=true `
+    #       /p:BootstrapperEnabled=true `
+    #       /p:IsWebBootstrapper=true `
+    #       /p:SignManifests=false `
+    #       /p:ManifestCertificateThumbprint="" `
+    #       /p:ManifestKeyFile="" `
+    #       /p:OutputPath="bin\Release" `
+    #       /v:detailed
