@@ -14,47 +14,8 @@ permissions:
 
 jobs:
   build:
-    runs-on: [self-hosted, windows, x64, laptop]
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-  
-    - name: Build and Publish ClickOnce with MSBuild
-      shell: powershell
-      run: |
-        nuget restore ./AFIFSALESSYSTEM.sln
-        msbuild ./AFIFSALESSYSTEM/AFIFSALESSYSTEM.csproj `
-          /t:Publish `
-          /p:Configuration=Release `
-          /p:Platform="Any CPU" `
-          /p:AssemblyVersion=3.0.0.0 `
-          /p:FileVersion="2025.11.7.1" `
-          /p:ApplicationVersion="3.0.0.1" `
-          /p:MinimumRequiredVersion="3.0.0.0" `
-          /p:PublishDir="C:\\publish\\" `
-          /p:InstallFrom=Web `
-          /p:PublishUrl="file:///C:/publish/" `
-          /p:InstallUrl="https://tuservidor.com/aplicacion/" `
-          /p:Install=true `
-          /p:ProductName="AFIFSALESSYSTEM_NUEVO" `
-          /p:PublisherName="Hola" `
-          /p:CreateDesktopShortcut=true `
-          /p:BootstrapperEnabled=true `
-          /p:IsWebBootstrapper=true `
-          /p:SignManifests=false `
-          /p:ManifestCertificateThumbprint="" `
-          /p:ManifestKeyFile="" `
-          /p:CreateWebPageOnPublish=true `
-          /p:WebPageFileName=publish.htm `
-          /p:OutputPath="bin\Release" `
-          /v:detailed
-
-
-    - name: Commit new version
-      if: success()
-      run: |
-        git config user.name "FrankBatista09"
-        git config user.email "heatfrank02@gmail.com"
-        git add .
-        git commit -m "Auto bump assembly version [skip ci]" || echo "No changes to commit"
-        git push
+    uses: PruebaActions/WorkFlows-Templates/.github/workflows/building-desktop.yaml@main
+    with:
+      publishDir: "C:\\inetpub\\wwwroot\\AFIFSALESSYSTEM\\"
+      installUrl: "www.google.com"
+      appVersion: "2025.10.11.2"

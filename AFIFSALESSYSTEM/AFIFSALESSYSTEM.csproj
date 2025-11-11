@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -12,26 +13,41 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>publish\</PublishUrl>
-    <Install>false</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
+
+    <!-- ========================== -->
+    <!-- 🔹 CONFIGURACIÓN CLICKONCE -->
+    <!-- ========================== -->
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl Condition=>C:\inetpub\wwwroot\AFIFSALESSYSTEM\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
+    <UpdateRequired>true</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ProductName Condition=" '$(ProductName)' == '' ">AFIF</ProductName>
-    <PublisherName>Frank</PublisherName>
-    <SuiteName>Suite</SuiteName>
-    <ApplicationRevision>2</ApplicationRevision>
-    <ApplicationVersion Condition=" '$(ApplicationVersion)' == '' ">1.0.0.%2a</ApplicationVersion>
+    <ProductName>AFIFSALESSYSTEM</ProductName>
+    <PublisherName>Solvex Dominicana</PublisherName>
+    <SuiteName>AFIF</SuiteName>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.1</ApplicationVersion>
+    <MinimumRequiredVersion>1.0.0.1</MinimumRequiredVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPageFileName>publish.htm</WebPageFileName>
+    <InstallUrl>https://www.keyviewsales.com/AFIFSALESSYSTEM/</InstallUrl>
+    <PublishDir>C:\inetpub\wwwroot\AFIFSALESSYSTEM\</PublishDir>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
+
+  <!-- 🔹 Debug -->
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
@@ -42,6 +58,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+
+  <!-- 🔹 Release -->
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
@@ -51,24 +69,15 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+
+  <!-- 🔹 Firma / Manifiestos -->
   <PropertyGroup>
     <ManifestCertificateThumbprint>EBF60F80D1E2280540D6691DF708BD72EB18BA6D</ManifestCertificateThumbprint>
-  </PropertyGroup>
-  <PropertyGroup>
     <ManifestKeyFile>AFIFSALESSYSTEM_TemporaryKey.pfx</ManifestKeyFile>
-  </PropertyGroup>
-  <PropertyGroup>
-    <GenerateManifests>true</GenerateManifests>
-  </PropertyGroup>
-  <PropertyGroup>
-    <TargetZone>LocalIntranet</TargetZone>
-  </PropertyGroup>
-  <PropertyGroup>
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
-  <PropertyGroup>
-    <SignManifests>true</SignManifests>
-  </PropertyGroup>
+
+  <!-- 🔹 Referencias -->
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -82,6 +91,8 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
+
+  <!-- 🔹 Archivos del proyecto -->
   <ItemGroup>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -111,14 +122,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+
+  <!-- 🔹 Paquetes bootstrapper -->
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.7.2 (x86 and x64)</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
@@ -127,5 +138,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
