@@ -18,7 +18,10 @@ jobs:
     with:
       publishDir: "C:\\test\\wwwroot\\AFIFSALESSYSTEM\\"
       installUrl: "www.google.com"
-      appVersion: "2025.10.11.2"
+      appConfigPath: "./AFIFSALESSYSTEM/newapp/App.config"
+      project_path: ./AFIFSALESSYSTEM/AFIFSALESSYSTEM.csproj
+      sln_path: ./AFIFSALESSYSTEM.sln
+      AssemblyVersion: "3.0.0.0"
 
 
 
