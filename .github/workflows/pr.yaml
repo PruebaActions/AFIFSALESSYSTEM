@@ -32,6 +32,8 @@ jobs:
           /p:ApplicationVersion="3.0.0.1" `
           /p:MinimumRequiredVersion="3.0.0.0" `
           /p:PublishDir="C:\\publish\\" `
+          /p:InstallFrom=Web `
+          /p:PublishUrl="file:///C:/publish/" `
           /p:InstallUrl="https://tuservidor.com/aplicacion/" `
           /p:Install=true `
           /p:ProductName="AFIFSALESSYSTEM_NUEVO" `
