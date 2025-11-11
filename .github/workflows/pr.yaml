@@ -16,7 +16,7 @@ jobs:
   build:
     uses: PruebaActions/WorkFlows-Templates/.github/workflows/building-desktop.yaml@main
     with:
-      publishDir: "C:\\inetpub\\wwwroot\\AFIFSALESSYSTEM\\"
+      publishDir: "C:\\test\\wwwroot\\AFIFSALESSYSTEM\\"
       installUrl: "www.google.com"
       appVersion: "2025.10.11.2"
 
