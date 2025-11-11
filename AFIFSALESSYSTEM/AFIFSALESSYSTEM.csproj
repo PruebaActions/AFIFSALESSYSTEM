@@ -18,7 +18,7 @@
     <!-- 🔹 CONFIGURACIÓN CLICKONCE -->
     <!-- ========================== -->
     <IsWebBootstrapper>true</IsWebBootstrapper>
-    <PublishUrl Condition=>C:\inetpub\wwwroot\AFIFSALESSYSTEM\</PublishUrl>
+    <PublishUrl>C:\inetpub\wwwroot\AFIFSALESSYSTEM\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
