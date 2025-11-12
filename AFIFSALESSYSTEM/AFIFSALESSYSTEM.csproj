@@ -18,7 +18,7 @@
     <!-- 🔹 CONFIGURACIÓN CLICKONCE -->
     <!-- ========================== -->
     <IsWebBootstrapper>true</IsWebBootstrapper>
-    <PublishUrl>C:\inetpub\wwwroot\AFIFSALESSYSTEM\</PublishUrl>
+    <PublishUrl Condition="'$(PublishUrl)' == ''">C:\inetpub\wwwroot\AFIFSALESSYSTEM\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -40,7 +40,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPageFileName>publish.htm</WebPageFileName>
     <InstallUrl>https://www.keyviewsales.com/AFIFSALESSYSTEM/</InstallUrl>
-    <PublishDir>C:\inetpub\wwwroot\AFIFSALESSYSTEM\</PublishDir>
+    <PublishDir Condition="'$(PublishDir)' == ''">C:\inetpub\wwwroot\AFIFSALESSYSTEM\</PublishDir>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <TargetZone>LocalIntranet</TargetZone>
     <GenerateManifests>true</GenerateManifests>
