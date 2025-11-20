@@ -16,7 +16,7 @@ jobs:
     uses: PruebaActions/WorkFlows-Templates/.github/workflows/building-desktop.yaml@main
     with:
       publishDir: "C:\\test\\wwwroot\\AFIFSALESSYSTEM\\"
-      installUrl: "www.google.com"
+      installUrl: "https://dev.gbsinternationalinc.com/QA_UVC_AUTOMATION_CLICKONCE/"
       appConfigPath: "./AFIFSALESSYSTEM/newapp/App.config"
       project_path: ./AFIFSALESSYSTEM/AFIFSALESSYSTEM.csproj
       sln_path: ./AFIFSALESSYSTEM.sln
