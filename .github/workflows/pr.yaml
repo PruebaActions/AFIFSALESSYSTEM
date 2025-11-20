@@ -21,7 +21,6 @@ jobs:
       project_path: ./AFIFSALESSYSTEM/AFIFSALESSYSTEM.csproj
       sln_path: ./AFIFSALESSYSTEM.sln
       AssemblyVersion: "3.0.0.0"
-      appConfigPath: "./AFIFSALESSYSTEM/newapp/App.config"
       assemblyInfo_path: "./AFIFSALESSYSTEM/newapp/Properties/AssemblyInfo.cs"
       dest_appConfig_path: "./AFIFSALESSYSTEM/App.config"
       msi_project_path: "./MSI/MSI.vdproj"
