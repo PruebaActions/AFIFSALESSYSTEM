@@ -27,13 +27,14 @@ jobs:
       runner_tag: '["self-hosted", "windows", "x64", "laptop"]'
 
       project_compile_info_json: |
-         [
+        {
+          "include" : [
             {
               "publishDir": "C:\\test\\wwwroot\\AFIFSALESSYSTEM\\",
               "installUrl": "https://www.afifsales.com/AFIFSALESSYSTEMAM/",
               "appConfigPath": "./AFIFSALESSYSTEM/newapp/App.config",
-              "project_path": ""./AFIFSALESSYSTEM/AFIFSALESSYSTEM.csproj",
-              "sln_path": ""./AFIFSALESSYSTEM.sln",
+              "project_path": "./AFIFSALESSYSTEM/AFIFSALESSYSTEM.csproj",
+              "sln_path": "./AFIFSALESSYSTEM.sln",
               "AssemblyVersion": "3.0.0.0",
               "assemblyInfo_path": "./AFIFSALESSYSTEM/Properties/AssemblyInfo.cs",
               "dest_appConfig_path": "./AFIFSALESSYSTEM/App.config",
@@ -41,10 +42,11 @@ jobs:
               "cert_path": " "
             }
           ]
-
+        }
 
       projects_json: |
-          [
+        {
+          "include" : [
             {
               "project_name": "AFIFSALESSYSTEM",
               "deploy_target_path": "C:\\test2\\wwwroot\\AFIFSALESSYSTEM\\OnlyClickOnce\\",
@@ -56,6 +58,7 @@ jobs:
               "artifact_name":"MSI-Installer"
             }
           ]
+        }
       skip_items_json: |
         [
           "web.config"
