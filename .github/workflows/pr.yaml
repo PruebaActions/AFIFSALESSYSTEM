@@ -10,7 +10,7 @@ permissions:
   contents: write
   security-events: write
   issues: write
-#ssaasdadassda
+#ssaasdadsawfacs
 jobs:
   build:
     uses: PruebaActions/WorkFlows-Templates/.github/workflows/building-desktop.yaml@main
