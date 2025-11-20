@@ -10,7 +10,7 @@ permissions:
   contents: write
   security-events: write
   issues: write
-#ssassasdad
+#ssaasdsad
 jobs:
   build:
     uses: PruebaActions/WorkFlows-Templates/.github/workflows/building-desktop.yaml@main
@@ -33,6 +33,11 @@ jobs:
               "project_name": "AFIFSALESSYSTEM",
               "deploy_target_path": "C:\\test2\\wwwroot\\AFIFSALESSYSTEM\\OnlyClickOnce\\",
               "artifact_name":"ClickOnce-Package"
+            },
+            {
+              "project_name": "AFIFSALESSYSTEM",
+              "deploy_target_path": "C:\\test2\\wwwroot\\AFIFSALESSYSTEM\\OnlyMSI\\",
+              "artifact_name":"MSI-Installer"
             }
           ]
         }
