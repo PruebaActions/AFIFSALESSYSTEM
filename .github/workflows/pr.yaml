@@ -26,9 +26,8 @@ jobs:
       # msi_project_path: "./MSI/MSI.vdproj"
       # runner_tag: '["self-hosted", "windows", "x64", "laptop"]'
 
-      project_compile_info_json: >-
-        {
-          "include" : [
+      project_compile_info_json: |
+         [
             {
               "publishDir": "C:\\test\\wwwroot\\AFIFSALESSYSTEM\\",
               "installUrl": "https://www.afifsales.com/AFIFSALESSYSTEMAM/",
@@ -42,11 +41,10 @@ jobs:
               "cert_path": " "
             }
           ]
-        }
+
 
       projects_json: |
-        {
-          "include" : [
+          [
             {
               "project_name": "AFIFSALESSYSTEM",
               "deploy_target_path": "C:\\test2\\wwwroot\\AFIFSALESSYSTEM\\OnlyClickOnce\\",
@@ -58,7 +56,6 @@ jobs:
               "artifact_name":"MSI-Installer"
             }
           ]
-        }
       skip_items_json: |
         [
           "web.config"
