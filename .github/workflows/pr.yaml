@@ -15,16 +15,34 @@ jobs:
   build:
     uses: PruebaActions/WorkFlows-Templates/.github/workflows/building-desktop.yaml@main
     with:
-      publishDir: "C:\\test\\wwwroot\\AFIFSALESSYSTEM\\"
-      installUrl: "https://www.afifsales.com/AFIFSALESSYSTEMAM/"
-      appConfigPath: "./AFIFSALESSYSTEM/newapp/App.config"
-      project_path: ./AFIFSALESSYSTEM/AFIFSALESSYSTEM.csproj
-      sln_path: ./AFIFSALESSYSTEM.sln
-      AssemblyVersion: "3.0.0.0"
-      assemblyInfo_path: "./AFIFSALESSYSTEM/Properties/AssemblyInfo.cs"
-      dest_appConfig_path: "./AFIFSALESSYSTEM/App.config"
-      msi_project_path: "./MSI/MSI.vdproj"
-      runner_tag: '["self-hosted", "windows", "x64", "laptop"]'
+      # publishDir: "C:\\test\\wwwroot\\AFIFSALESSYSTEM\\"
+      # installUrl: "https://www.afifsales.com/AFIFSALESSYSTEMAM/"
+      # appConfigPath: "./AFIFSALESSYSTEM/newapp/App.config"
+      # project_path: ./AFIFSALESSYSTEM/AFIFSALESSYSTEM.csproj
+      # sln_path: ./AFIFSALESSYSTEM.sln
+      # AssemblyVersion: "3.0.0.0"
+      # assemblyInfo_path: "./AFIFSALESSYSTEM/Properties/AssemblyInfo.cs"
+      # dest_appConfig_path: "./AFIFSALESSYSTEM/App.config"
+      # msi_project_path: "./MSI/MSI.vdproj"
+      # runner_tag: '["self-hosted", "windows", "x64", "laptop"]'
+
+      project_compile_info_json: |
+        {
+          "include" : [
+            {
+              "publishDir": "C:\\test\\wwwroot\\AFIFSALESSYSTEM\\",
+              "installUrl": "https://www.afifsales.com/AFIFSALESSYSTEMAM/",
+              "appConfigPath": "./AFIFSALESSYSTEM/newapp/App.config",
+              "project_path": ""./AFIFSALESSYSTEM/AFIFSALESSYSTEM.csproj",
+              "sln_path": ""./AFIFSALESSYSTEM.sln",
+              "AssemblyVersion": "3.0.0.0",
+              "assemblyInfo_path": "./AFIFSALESSYSTEM/Properties/AssemblyInfo.cs",
+              "dest_appConfig_path": "./AFIFSALESSYSTEM/App.config",
+              "msi_project_path": "./MSI/MSI.vdproj",
+              "cert_path": " "
+            }
+          ]
+        }
 
       projects_json: |
         {
