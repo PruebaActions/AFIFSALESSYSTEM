@@ -31,7 +31,8 @@ jobs:
           "include" : [
             {
               "project_name": "AFIFSALESSYSTEM",
-              "deploy_target_path": "C:\\test2\\wwwroot\\AFIFSALESSYSTEM\\",
+              "deploy_target_path": "C:\\test2\\wwwroot\\AFIFSALESSYSTEM\\OnlyClickOnce\\",
+              "artifact_name":"ClickOnce-Package"
             }
           ]
         }
