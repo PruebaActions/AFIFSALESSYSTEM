@@ -26,7 +26,7 @@ jobs:
       msi_project_path: "./MSI/MSI.vdproj"
       runner_tag: '["self-hosted", "windows", "x64", "laptop"]'
 
-      project_json: |
+      projects_json: |
         {
           "include" : [
             {
