@@ -14,19 +14,26 @@ permissions:
 
 env:
   PUBLISH_DIR: "C:\\test\\wwwroot\\AFIFSALESSYSTEM\\"
-  INSTALL_URL: "https://www.afifsales.com/AFIFSALESSYSTEMAM/"
 jobs:
   build:
     uses: PruebaActions/WorkFlows-Templates/.github/workflows/building-desktop.yaml@main
     with:
       runner_tag: '["self-hosted", "windows", "x64", "laptop"]'
 
-      project_compile_info_json: 
-        '{
+      
+      
+      
+      
+      
+      
+      
+      
+      project_compile_info_json: |
+        {
           "include" : [
             {
               "publishDir": "${{ env.PUBLISH_DIR }}",
-              "installUrl": "${{ env.INSTALL_URL }}",
+              "installUrl": "https://www.afifsales.com/AFIFSALESSYSTEMAM/",
               "appConfigPath": "./AFIFSALESSYSTEM/newapp/App.config",
               "project_path": "./AFIFSALESSYSTEM/AFIFSALESSYSTEM.csproj",
               "sln_path": "./AFIFSALESSYSTEM.sln",
@@ -37,7 +44,7 @@ jobs:
               "cert_path": " "
             }
           ]
-        }'
+        }
 
       projects_json: |
         {
