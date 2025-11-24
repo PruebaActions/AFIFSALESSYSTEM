@@ -11,6 +11,9 @@ permissions:
   security-events: write
   issues: write
 #ssasadasdsadas
+
+env:
+  PUBLISH_DIR: "C:\\test\\wwwroot\\AFIFSALESSYSTEM\\"
 jobs:
   build:
     uses: PruebaActions/WorkFlows-Templates/.github/workflows/building-desktop.yaml@main
@@ -21,7 +24,7 @@ jobs:
         {
           "include" : [
             {
-              "publishDir": "C:\\test\\wwwroot\\AFIFSALESSYSTEM\\",
+              "publishDir": "${{ env.PUBLISH_DIR }}",
               "installUrl": "https://www.afifsales.com/AFIFSALESSYSTEMAM/",
               "appConfigPath": "./AFIFSALESSYSTEM/newapp/App.config",
               "project_path": "./AFIFSALESSYSTEM/AFIFSALESSYSTEM.csproj",
