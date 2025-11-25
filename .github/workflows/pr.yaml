@@ -16,12 +16,13 @@ jobs:
   build:
     uses: PruebaActions/WorkFlows-Templates/.github/workflows/building-desktop.yaml@main
     with:
-      # runner_tag: |
-      #   [
-      #     ["self-hosted", "windows", "x64", "laptop"],
-      #     ["self-hosted", "windows", "x64", "principal"]
-      #   ]
-      runner_tag: 'principal'
+      runner_tag: |
+        {
+          "include": [
+            { "labels": ["self-hosted", "windows", "x64", "laptop"] },
+            { "labels": ["self-hosted", "windows", "x64", "principal"] }
+          ]
+        }
         
       project_compile_info_json: |
         {
