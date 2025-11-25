@@ -10,7 +10,7 @@ permissions:
   contents: write
   security-events: write
   issues: write
-#ssasasasdsadsa
+#sasdas
 
 jobs:
   build:
@@ -19,7 +19,7 @@ jobs:
       runner_tag: |
         {
           "include": [
-            { "labels": ["self-hosted", "windows", "x64", "laptop"] },
+            { "labels": ["self-hosted", "windows", "x64", "laptop"] },  
             { "labels": ["self-hosted", "windows", "x64", "principal"] }
           ]
         }
