@@ -16,7 +16,12 @@
     <!-- 🔹 CONFIGURACIÓN CLICKONCE -->
     <!-- ========================== -->
     <IsWebBootstrapper>true</IsWebBootstrapper>
-    <PublishUrl Condition="'$(PublishUrl)' == ''">C:\test\wwwroot\AFIFSALESSYSTEM\</PublishUrl>
+    <WebPageFileName>publish.htm</WebPageFileName>
+    <PublishDir Condition="'$(PublishDir)' == ''">C:\test\wwwroot\AFIFSALESSYSTEM\</PublishDir>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <PublishUrl>C:\test\wwwroot\AFIFSALESSYSTEM\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -26,23 +31,18 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>true</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>https://www.keyviewsales.com/AFIFSALESSYSTEM/</InstallUrl>
     <ProductName>AFIFSALESSYSTEM</ProductName>
     <PublisherName>Solvex Dominicana</PublisherName>
     <SuiteName>AFIF</SuiteName>
+    <MinimumRequiredVersion>1.0.0.1</MinimumRequiredVersion>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.1</ApplicationVersion>
-    <MinimumRequiredVersion>1.0.0.1</MinimumRequiredVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
-    <WebPageFileName>publish.htm</WebPageFileName>
-    <InstallUrl>https://www.keyviewsales.com/AFIFSALESSYSTEM/</InstallUrl>
-    <PublishDir Condition="'$(PublishDir)' == ''">C:\test\wwwroot\AFIFSALESSYSTEM\</PublishDir>
-    <CreateDesktopShortcut>true</CreateDesktopShortcut>
-    <TargetZone>LocalIntranet</TargetZone>
-    <GenerateManifests>true</GenerateManifests>
-    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <!-- 🔹 Debug -->
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -70,6 +70,26 @@
     <ManifestCertificateThumbprint>EBF60F80D1E2280540D6691DF708BD72EB18BA6D</ManifestCertificateThumbprint>
     <ManifestKeyFile>AFIFSALESSYSTEM_TemporaryKey.pfx</ManifestKeyFile>
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <!-- 🔹 Referencias -->
   <ItemGroup>
@@ -121,7 +141,7 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.7.2 (x86 and x64)</ProductName>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
