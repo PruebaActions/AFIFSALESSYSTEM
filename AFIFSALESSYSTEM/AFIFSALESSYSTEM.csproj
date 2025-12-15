@@ -146,4 +146,17 @@
     </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
+  <Target Name="ObfuscateBeforePublish"
+        BeforeTargets="Publish"
+        Condition="'$(Configuration)' == 'Release'">
+
+  <Message Text="Running Obfuscar before ClickOnce Publish..." Importance="high" />
+
+  <Exec Command="
+    &quot;C:\Users\Administrator\AppData\Local\Microsoft\VisualStudio\17.0_6d29ba01\Extensions\lf44xtf1.gdm\files\Obfuscar.Console.exe&quot;
+    &quot;$(ProjectDir)obfuscar_Release_Any CPU.xml&quot;
+  " />
+
+</Target>
 </Project>
