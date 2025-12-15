@@ -153,10 +153,7 @@
 
   <Message Text="Running Obfuscar before ClickOnce Publish..." Importance="high" />
 
-  <Exec Command="
-    &quot;$(ProjectDir)_Obfuscar\Obfuscar.Console.exe&quot;
-    &quot;$(ProjectDir)obfuscar_Release_Any_CPU.xml&quot;
-  " />
+  <Exec Command="&quot;$(ProjectDir)_Obfuscar\Obfuscar.Console.exe&quot;&quot;$(ProjectDir)obfuscar_Release_Any_CPU.xml&quot;" />
 
 </Target>
 </Project>
