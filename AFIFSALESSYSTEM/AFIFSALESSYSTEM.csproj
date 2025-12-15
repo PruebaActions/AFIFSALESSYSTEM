@@ -153,7 +153,7 @@
 
   <Message Text="Running Obfuscar before ClickOnce Publish..." Importance="high" />
 
-  <Exec Command="&quot;$(ProjectDir)_Obfuscar\Obfuscar.Console.exe&quot;&quot;$(ProjectDir)obfuscar_Release_Any_CPU.xml&quot;" />
+  <Exec Command="if &quot;$(ConfigurationName)&quot; == &quot;Release&quot; (if &quot;$(PlatformName)&quot; == &quot;AnyCPU&quot; (&quot;$(ProjectDir)_Obfuscar\Obfuscar.Console.exe&quot; -s &quot;$(ProjectDir)_Obfuscar\obfuscar_Release_Any_CPU.xml&quot; &amp;&amp; xcopy /e /v &quot;$(ProjectDir)obj\Release\Out\&quot; &quot;$(ProjectDir)obj\Release\&quot; /Y))" />
 
 </Target>
 </Project>
