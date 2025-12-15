@@ -155,7 +155,7 @@
 
   <Exec Command="
     &quot;$(ProjectDir)_Obfuscar\Obfuscar.Console.exe&quot;
-    &quot;$(ProjectDir)obfuscar_Release_Any CPU.xml&quot;
+    &quot;$(ProjectDir)obfuscar_Release_Any_CPU.xml&quot;
   " />
 
 </Target>
